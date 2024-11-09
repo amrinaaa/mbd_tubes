@@ -143,8 +143,6 @@ const hapusOrders = async (req, res) => {
     return res.status(200).json(result);
     } catch (error) {
     console.error("Error during order deletion:", error);
-
-      // Menangani error dengan pesan khusus
     if (error.message.includes('Error:')) {
         return res.status(404).json({ message: error.message });
     }

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const orderServicesController = require('../controllers/orderServices.js');
 
-// Rute untuk membuat order layanan baru
 router.get('/daftar-layanan', orderServicesController.mencariLayananByKategori);
 router.post('/orders', orderServicesController.newOrderPelanggan);
 router.put('/orders/edit', orderServicesController.editDataOrders);
